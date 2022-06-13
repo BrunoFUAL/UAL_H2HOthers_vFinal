@@ -1,0 +1,174 @@
+.avatar-ctn{
+    text-align: center;
+}
+
+.avatar{
+    width: 40%;
+    border-bottom: 1px solid rbga(0,0,0, 0.125);
+}
+
+ 
+.banner{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+
+}
+
+#slideImg{
+    width: 100%;
+    height: 100%;
+    animation: zoom 3s linear infinite;
+}
+
+@keyframes zoom{
+    0%{
+        transform: scale(1.3);
+    }
+    15%{
+        transform: scale(1);
+    }
+    85%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.3);
+    }
+}
+
+.overlay{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+    position: absolute;
+    top: 0;
+}
+
+.content{
+    width: 60%;
+    margin: 160px auto 0;
+    text-align: center;
+    color: $white-color;
+}
+
+.content h1{
+    font-size: 60px;
+}
+
+.content h3{
+    width: 80%;
+    margin: 20px auto 100px;
+    font-weight: 100;
+    line-height: 25px;
+}
+
+.container h3{
+    font-size: 15px;
+    text-align: left;
+}
+
+.nav__logo {
+    text-align: left;
+}
+
+.card-body{
+    background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(255,255,255,1) 100%);
+}
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+  }
+
+
+
+  .cta {
+    display: flex;
+    padding: 10px 45px;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px;
+    color: white;
+    background: #6225E6;
+    transition: 1s;
+    box-shadow: 6px 6px 0 black;
+    transform: skewX(-15deg);
+}
+
+.cta:focus {
+   outline: none; 
+}
+
+.cta:hover {
+    transition: 0.5s;
+    box-shadow: 10px 10px 0 #FBC638;
+}
+
+.cta span:nth-child(2) {
+    transition: 0.5s;
+    margin-right: 0px;
+}
+
+.cta:hover  span:nth-child(2) {
+    transition: 0.5s;
+    margin-right: 45px;
+}
+
+
+/* ==========================MEDIA QUERIES (MEDIUM DEVICES) ========================== */
+
+@media screen and (max-width: 1024px) {
+    
+    .overlay{
+        flex-wrap: wrap;
+    }
+
+
+    header {
+        height: 60vh;
+    }
+    .container {
+        gap: 1rem;
+        grid-template-columns: 1fr;
+
+        .imgBx {
+            padding: 1.2rem;
+            gap: 0.8rem;
+        }
+    }
+}
+
+/* ==========================MEDIA QUERIES (SMALL DEVICES) ========================== */
+
+@media screen and (max-width: 600px) {
+    header {
+        height: 100vh;
+        padding-top: 3rem;
+
+        .container {
+            grid-template-columns: 1fr;
+            text-align: center;
+
+            .header__content {
+                margin: 0.8rem 0 1.5rem;
+                line-height: 1.4 ;
+            }
+
+        }
+    }
+    
+}
+
+

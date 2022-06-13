@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <!-- CSS  -->
+  <link rel="stylesheet" href="/css/style.min.css" />
+
+  <title>H2HOthers - Área Reservada a Voluntários registados</title>
+
+
+  <!--  ICONSCOUT CDN  -->
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css" />
+
+  <!--  BOXICONS CDN   -->
+  <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+
+
+  <!-- Google Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+  <script src="../js/main.js"></script>
+
+</head>
+
+<body onload="slider()">
+  <nav>
+
+    <div class="container">
+      <img class="card-img-top" src="../images/logo04062022.png" alt="Card image" style="width:6%">
+      <a href="h3" class="nav__logo">
+        <h3>H2HOthers - Olá {{user.name}}, bem vindo de volta </h3>
+      </a>
+
+      <ul id="nav__items">
+        <li><a href="/">Página Inicial</a></li>
+        <li><a href="/voluntario">Voluntario</a></li>
+        <li><a href="/auth/logout">Logout</a></li>
+        <li><a class="btn cta" onclick="window.location.href ='loja';">Loja Online</a></li>
+      </ul>
+
+      <button id="open__nav-btn"><i class="bx bx-menu"></i></button>
+      <button id="close__nav-btn"><i class="bx bx-x"></i></button>
+    </div>
+  </nav>
+
+  <header>
+    <div class="banner">
+      <div class="slider">
+        <img src="../images/pobreza1.jpg" id="slideImg">
+      </div>
+      <div class="overlay">
+        <div class="content">
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <h1>Faça o seu donativo</h1>
+          <h3>IBAN: 0035 0301 00204536569 91</h3>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!--====================FIM DO HEADER====================-->
+
+  <body>
+
+    <section id="eventosh2h">
+      <h2>Eventos solidários H2HOthers</h2>
+      <p>
+        Espaço dedicado à divulgação de iniciativas organizadas pela H2Hothers
+      </p>
+      <h2><a href="#open-modal_evento1">Inscreva-se!</a></h2>
+      <div class="container_eventos">
+        <div class="box">
+          <div class="imgBx">
+            <img src="../uploads/evento_interno_1.jpg">
+          </div>
+          <div class="content">
+            <h2><iframe id="texto" src="../uploads/evento_interno_1.txt"></iframe>
+              <h2></h2>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="imgBx">
+            <img src="../uploads/evento_interno_2.jpg">
+          </div>
+          <div class="content">
+            <h2><iframe id="texto_2" src="../uploads/evento_interno_2.txt"></iframe>
+              <h2></h2>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="imgBx">
+            <img src="../uploads/evento_interno_3.jpg">
+          </div>
+
+          <div class="content">
+
+            <h2><iframe id="texto_3" src="../uploads/evento_interno_3.txt"></iframe>
+              <h2></h2>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!--====================FIM DOS MODALS====================-->
+
+    <script>
+      var frame = document.getElementById('texto');
+      frame.onload = function () {
+        var body = frame.contentWindow.document.querySelector('body');
+        body.style.color = 'white';
+        body.style.fontSize = '20px';
+        body.style.lineHeight = '20px';
+      };
+
+      var frame_2 = document.getElementById('texto_2');
+      frame_2.onload = function () {
+        var body = frame_2.contentWindow.document.querySelector('body');
+        body.style.color = 'white';
+        body.style.fontSize = '20px';
+        body.style.lineHeight = '20px';
+      };
+
+      var frame_3 = document.getElementById('texto_3');
+      frame_3.onload = function () {
+        var body = frame_3.contentWindow.document.querySelector('body');
+        body.style.color = 'white';
+        body.style.fontSize = '20px';
+        body.style.lineHeight = '20px';
+      };
+    </script>
+
+    <!--====================FIM DOS SCRIPTS DOS MODALS====================-->
+
+
+
+    <div id="open-modal_evento1" class="modal-window">
+      <div>
+        <a href="#" title="Close" class="modal-close">Fechar</a>
+        <p>Formulário de Inscrição</p>
+        <div class="modal-body">
+          <div class="card-body">
+            <form action="/auth/register_events" method="POST">
+              <div class="mb-3">
+                <label for="name" class="form-label">Nome</label>
+                <input type="text" class="form-control" id="name_i" name="name">
+              </div>
+
+              <div class="mb-3">
+                <label for="email" class="form-label">Endereço de E-mail</label>
+                <input type="email" class="form-control" id="email" name="email">
+              </div>
+
+              <div class="mb-3">
+                <label for="tlf" class="form-label">Telefone</label>
+                <input type="text" class="form-control" id="tlf" name="tlf">
+              </div>
+
+              <div class="mb-3">
+                <label for="date" class="form-label">Data Inscrição</label>
+                <input type="date" class="form-control" id="date" name="date">
+              </div>
+
+              <div class="mb-3">
+                <label for="event" class="form-label">Evento</label>
+                <select id="event" name="event">
+                <option value="Evento_1">Evento nº1</option>
+                <option value="Evento_2">Evento nº2</option>
+                <option value="Evento_3">Evento nº3</option>
+              </select>
+              </div>
+
+              <button type="submit" class="btn-registar">Submeter</button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!--Bootstrap-->
+
+    <script>
+      var slideImg = document.getElementById("slideImg");
+
+      var images = new Array(
+        "../images/pobreza1.jpg",
+        "../images/pobreza2.jpg",
+        "../images/pobreza4.jpg",
+        "../images/pobreza5.jpg",
+        "../images/pobreza6.jpg",
+        "../images/pobreza7.jpg",
+        "../images/pobreza8.jpg"
+      );
+
+      var len = images.length;
+      var i = 0;
+
+      function slider() {
+        if (i > len - 1) {
+          i = 0;
+        }
+        slideImg.src = images[i];
+        i++;
+        setTimeout('slider()', 3000);
+      }
+
+    </script>
+
+    <!--====================FIM DA SECCAO EVENTOS H2HOTHERS====================-->
+
+
+    <section id="comentarios">
+      <h2>Deixe-nos o seu feedback</h2>
+      <p>
+        A sua opinião é muito importante para nós
+      </p>
+      <div class="container">
+
+        <br>
+
+        <div id="main-content">
+          <div id="make-comment">
+            <div class="form-group">
+              <label for="name">Nome</label>
+              <input style="width:250px" class="form-control" type="text" id="name" required>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Escreva o seu comentário</label>
+              <textarea class="form-control" id="message" required></textarea>
+
+            </div>
+            <button type="button" class="btn btn-success" onclick="inserirComentario()">Inserir</button>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+
+
+    <!--====================FIM DA SECCAO COMENTÁRIOS====================-->
+
+
+    <script>
+      const navItems = document.querySelector("#nav__items");
+      const openNavBtn = document.querySelector("#open__nav-btn");
+      const closeNavBtn = document.querySelector("#close__nav-btn");
+
+      openNavBtn.addEventListener("click", () => {
+        navItems.style.display = "flex";
+        openNavBtn.style.display = "none";
+        closeNavBtn.style.display = "inline-block";
+      });
+
+      const closeNav = () => {
+        navItems.style.display = "none";
+        openNavBtn.style.display = "inline-block";
+        closeNavBtn.style.display = "none";
+      };
+
+      closeNavBtn.addEventListener("click", closeNav);
+
+      // close nav menu
+
+      if (window.innerWidth < 1024) {
+        document.querySelectorAll("#nav__items li a").forEach((navItem) => {
+          navItem.addEventListener("click", () => {
+            closeNav();
+          });
+        });
+      }
+
+      var swiper = new Swiper(".mySwiper", {
+        autoplay: { delay: 2000, },
+        slidesPerView: 1,
+        spaceBetween: 30,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+
+        // Responsive Breakpoints
+        breakpoints: {
+          // when window width is >= 600px
+          600: {
+            slidesPerView: 2,
+          },
+
+          // when window width is >= 600px
+          1024: {
+            slidesPerView: 3,
+          },
+        },
+      });
+    </script>
+
+
+
+
+  </body>
+
+  <footer>
+    <div class="container">
+      <article>
+        <a href="#" class="footer__logo">
+          <h3>H2HOthers</h3>
+        </a>
+        <p>
+          Plataforma criada para fins académicos
+        </p>
+        <div>
+          <i class="bx bxs-phone"></i>
+          <small>+351 211111111</small>
+        </div>
+        <div>
+          <i class="bx bx-mail-send"></i>
+          <small>ual.h2hothers@gmail.com</small>
+        </div>
+      </article>
+
+      <article>
+        <h3>Suporte</h3>
+        <a href="#">Politica de Privacidade</a>
+        <a href="#">Politica de Cookies</a>
+        <a href="#">Politica de Compras</a>
+        <a href="#">Condições Gerais</a>
+      </article>
+
+      <article>
+        <h3>Menu</h3>
+        <a href="#">Início</a>
+        <a href="#solidariedade">Solidariedade</a>
+        <a href="#eventos">Eventos</a>
+        <a href="#voluntariado">Voluntariado UAL</a>
+        <a href="#testemunhos">Testemunhos</a>
+        <a href="#inscrever" class="btn-primary">Inscreva-se já</a>
+      </article>
+
+      <article>
+        <h3>Contate-nos</h3>
+        <p>Noticias</p>
+        <p>FAQs</p>
+        <div class="footer__socials">
+          <a href="#"><i class="bx bxl-linkedin"></i></a>
+          <a href="#"><i class="bx bxl-twitter"></i></a>
+          <a href="#"><i class="bx bxl-facebook"></i></a>
+          <a href="#"><i class="bx bxl-instagram"></i></a>
+        </div>
+      </article>
+    </div>
+    <div class="copyright">
+      <small>&copy; Copyright H2HOthers. All Rights Reserved.</small>
+    </div>
+  </footer>
+
+</html>

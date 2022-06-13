@@ -1,0 +1,111 @@
+#voluntariado {
+    margin-top: 3rem;
+}
+    .voluntariado-container{
+        display: grid;
+        grid-template-columns: 40% 60%;
+        gap: 5rem;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        
+    }
+
+    .voluntariado-right > p {
+        margin: 1.6rem 0 2.5rem;
+    }
+
+    .voluntariado__cards{
+        
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+
+    .voluntariado__card{
+
+        color: white;
+        background: $primary-color;
+        padding: 1.6rem;
+        border-radius: 1rem;
+        align-items: center;
+        text-align: center;
+        transition: var(-webkit-transition);
+        font-family: "Montserrat", sans-serif;
+
+    }
+
+    .voluntariado__card:hover{
+        background-image: url("/images/tshirt.png");
+        box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.3);
+        color: orange;
+        font-weight: bold;
+        font-family: "Montserrat", sans-serif;
+
+        &:nth-child(2){
+            background-image: url("/images/redon.png");
+        }
+
+        &:nth-child(3){
+            background-image: url("/images/like.jpg");
+        }
+
+    }
+
+    .volundariado__icon{
+        background: rgb(255, 99, 71);
+        padding: 0.6rem;
+        border-radius: 1rem;
+        display: inline-block;
+        margin-bottom: 2rem;
+        font-size: 2rem;
+    }
+
+    .voluntariado__card p{
+        margin-top: 1rem;
+    }
+
+
+
+
+  
+  
+
+/* ==========================MEDIA QUERIES (MEDIUM DEVICES) ========================== */
+
+@media screen and (max-width: 1024px) {
+    .voluntariado{
+        margin-top: 2rem;
+    }
+
+    .voluntariado-container{
+        grid-template-columns: 1fr;
+        gap: 4rem
+    }
+
+    .voluntariado-left {
+        width: 50%;
+        margin: 0 auto;
+        flex-wrap: wrap;
+    }
+
+}
+
+/* ==========================MEDIA QUERIES (SMALL DEVICES) ========================== */
+
+@media screen and (max-width: 600px) {
+    .container .voluntariado-container{
+        grid-template-columns: 1fr;
+        gap: 4rem;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+
+    .voluntariado__cards{
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rem;
+    }
+
+
+
+}

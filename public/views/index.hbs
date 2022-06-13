@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>H2HOthers</title>
+
+  <!-- CSS  -->
+  <link rel="stylesheet" href="/css/style.min.css" />
+
+  <!--  ICONSCOUT CDN  -->
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css" />
+
+  <!--  BOXICONS CDN   -->
+  <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+  <!-- Google Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+  <!-- Cards-->
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+
+</head>
+
+<body onload="loadComments()">
+  <nav>
+    <div class="container">
+      <img class="card-img-top" src="../images/logo04062022.png" alt="Card image" style="width:6%">
+
+      <ul id="nav__items">
+        <li><a href="#">Início</a></li>
+        <li><a href="#solidariedade">Solidariedadesssss</a></li>
+        <li><a href="#eventos">Eventos</a></li>
+        <li><a href="#voluntariado">Voluntariado UAL</a></li>
+        <li><a href="#testemunhos">Testemunhos</a></li>
+        <li><a class="btn" onclick="window.location.href ='login';">Login</a></li>
+        <li><a class="btn" onclick="window.location.href ='registar';">Registo</a></li>
+      </ul>
+
+      <button id="open__nav-btn"><i class="bx bx-menu"></i></button>
+      <button id="close__nav-btn"><i class="bx bx-x"></i></button>
+    </div>
+  </nav>
+
+  <!--====================FIM DA NAV====================-->
+
+  <header>
+    <div class="container">
+      <div class="header__content">
+        <h1>Ser solidário, está nas mãos de cada um de nós</h1>
+        <p>
+          A plataforma Help to Help Others tem como objetivo principal criar uma comunidade de Voluntários
+          com a finalidade de apoiar Instituições de Solidariedade Social da Zona da Grande Lisboa e divulgar ações
+          propostas pelas mesmas.
+          Partilhamos igualmente os eventos organizados pela H2HOthers com o objetivo de apoiar a sociedade,
+          fomentando o espirito de entreajuda na comunidade universitária.
+          <br>
+          <br>
+          Caso represente uma Associação ou um possivel Patrocinador, pressione o botão abaixo para se inscrever
+
+        </p>
+        <br>
+        <a href="#inscrever" class="btn1 btn4">Sou uma Associação ou Patrocinador</a>
+      </div>
+      <div class="header__image">
+        <img src="/images/maos.jpg" alt="Header Image" />
+      </div>
+    </div>
+  </header>
+
+  <!--====================FIM DO HEADER====================-->
+
+  <section id="solidariedade">
+    <h2>As nossas áreas de atuação</h2>
+    <p>
+      A nossa estratégia de acção passa por vários Projectos na área de Solidariedade Social:
+    </p>
+
+
+    <!-- Modal content -->
+    <div id="open-modal" class="modal-window">
+      <div>
+        <a href="#solidariedade" title="Close" class="modal-close">Fechar</a>
+        <h1>De mãe para mãe</h1>
+        <img src="/images/mae_para_mae.jpg" alt="Header Image" />
+        <div>A H2HOthers acompanha famílias desfavorecidas e apoia as mães de modo a que a fase de gravidez,
+          nascimento do bebé e apoio pós parto seja um fator de melhoria da sua vida e da sua condição familiar.
+          Dispomos de um Banco de Voluntários compostos por equipas multidisciplinares, entre elas Enfermeiras
+          especializadas
+          e Psicólogos que fazem o seu acompanhamento do início da gravidez até ao fim do processo de adaptação do bebé
+          ao seu meio familiar.
+          Os parceiros e patrocinadores permitem-nos também o apoio com bens essenciais a estas famílias.
+        </div>
+      </div>
+    </div>
+
+    <div id="open-modal2" class="modal-window">
+      <div>
+        <a href="#solidariedade" title="Close" class="modal-close">Fechar</a>
+        <h1>Dá-me a tua mão</h1>
+        <img src="/images/dame_mao.jpg" alt="Header Image" />
+        <div>Desenvolvemos projetos de prevenção para crianças que vivem com as suas famílias biológicas
+          mas encontram-se em risco de privação de cuidados parentais. São promovidas competências de cuidado parental
+          e potenciadas dinâmicas de proteção que permitam o fortalecimento das famílias de origem com o objetivo de
+          assegurar
+          o bem estar das suas crianças e jovens, tais como acompanhamento psicossocial, capacitação parental individual
+          ou em Domicilio.
+          Paralelamente, intervimos na comunidade através da dinamização de fóruns comunitários, oficinas de formação
+          e ações de sensibilização e promoção dos Direitos da Criança.
+        </div>
+      </div>
+    </div>
+
+    <div id="open-modal3" class="modal-window">
+      <div>
+        <a href="#solidariedade" title="Close" class="modal-close">Fechar</a>
+        <h1>Vem trabalhar comigo</h1>
+        <img src="/images/vem_trabalhar.jpg" alt="Header Image" />
+        <div>Através da Bolsa de Voluntários e Parcerias da H2Others trabalhamos com jovens
+          entre os 17 e os 23 anos que têm menos oportunidades e estão em risco de exclusão social e educativa.
+          O objetivo é que, após a Formação, treino de competências e acompanhamento previstos no projeto, os jovens
+          consigam mudar
+          as suas vidas por dominarem as ferramentas de empregabilidade com mais facilidade, rapidez e flexibilidade.
+          O acompanhamento dos nossos Voluntários é crucial nesta fase da vidas destes jovens criando uma ligação como
+          Mentores e Mentees.
+        </div>
+      </div>
+    </div>
+
+    <div id="open-modal4" class="modal-window">
+      <div>
+        <a href="#solidariedade" title="Close" class="modal-close">Fechar</a>
+        <h1>O excesso que permite alimentar!</h1>
+        <img src="/images/excesso_comida.jpg" alt="Header Image" />
+        <div>Uma das preocupações da H2HOthers é manter uma economia circular e solidária.
+          Para isso, foi criada uma ponte humana entre o excesso e a necessidade com a ajuda de uma rede
+          de Parcerias de fornecimento de produtos alimentares perecíveis e em fim de vida.
+          Esta rede permite-nos ter acesso diário a alimentos que ainda se encontram em bom estado de consumo
+          e que são distribuídos a famílias carenciadas através dos nossos Voluntários.
+        </div>
+      </div>
+    </div>
+
+    <div id="open-modal5" class="modal-window">
+      <div>
+        <a href="#solidariedade" title="Close" class="modal-close">Fechar</a>
+        <h1>Veste-te de Laranja!</h1>
+        <img src="/images/laranja.jpg" alt="Header Image" />
+        <div>Tal como a maioria das Associações, a preocupação ambiental
+          está presente no dia a dia da H2HOthers.
+          Este Projeto nasceu num Pomar de Laranjas em Coruche e a ideia de Economia Circular
+          com o objetivo de oferecer alguma estabilidade financeira, foi imediatamente posta em pratica.
+          Os nossos Voluntários recolhem as laranjas no Pomar e entregam na RDD Textiles (Parceria) onde são
+          transformadas
+          em matéria prima para a criação de vestuário. Até a gigante industria de moda H&M já demonstrou interesse em
+          trabalhar em parceria com a Espresa.
+
+
+        </div>
+      </div>
+    </div>
+
+    <div id="open-modal6" class="modal-window">
+      <div>
+        <a href="#solidariedade" title="Close" class="modal-close">Fechar</a>
+        <h1>É tempo de reciclar</h1>
+        <img src="/images/vamos_reciclar.jpg" alt="Header Image" />
+        <div>O aumento acelerado da população do planeta aliado ao consumo exagerado de produtos e ao encaminhamento
+          incorreto de resíduos,
+          têm contribuído para um grave problema ambiental: a contínua produção de lixo.
+          A H2HOthers investe na Formação dos nossos Voluntários e jovens provenientes do Projeto
+          "Jovem, vem trabalhar comigo!" nas áreas de Costura, Restauração de Móveis e livros antigos.
+          Os artigos a reciclar são doados tanto por Voluntários como Instituições e após o devido tratamento
+          na nossa Oficina e Atelier são vendidos on-line e nos Mercados e Feiras semanais na Zona de Lisboa.
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container">
+      <a href="#open-modal">
+        <article>
+          <i class='bx bx-target-lock'></i>
+          <div>
+            <h4>De mãe para mãe</h4>
+
+            <small>A H2HOthers acompanha famílias desfavorecidas e apoia as mães de modo a que a fase de gravidez,
+              nascimento do bebé e apoio pós parto seja um fator de melhoria da sua vida e da sua condição
+              familiar...</small>
+            <p></p>
+            {{!-- <a class="btn-modal" href="#open-modal">Ver +</a> --}}
+          </div>
+        </article>
+      </a>
+
+      <a href="#open-modal2">
+        <article>
+          <i class='bx bx-target-lock'></i>
+          <div>
+            <h4>Dá-me a tua mão</h4>
+            <small>Desenvolvemos projetos de prevenção para crianças que vivem com as suas famílias
+              biológicas mas encontram-se em risco de privação de cuidados parentais.
+              São promovidas competências de cuidado parental...</small>
+          </div>
+
+        </article>
+      </a>
+
+      <a href="#open-modal3">
+        <article>
+          <i class='bx bx-target-lock'></i>
+          <div>
+            <h4>Vem trabalhar comigo</h4>
+            <small>Através da Bolsa de Voluntários e Parcerias da H2Others trabalhamos com jovens
+              entre os 17 e os 23 anos que têm menos oportunidades e estão em risco de exclusão social e educativa.
+              O objetivo é que, após a Formação... </small>
+          </div>
+        </article>
+      </a>
+
+      <a href="#open-modal4">
+        <article>
+          <i class='bx bx-target-lock'></i>
+          <div>
+            <h4>O excesso que permite alimentar!</h4>
+            <small>Uma das preocupações da H2HOthers é manter uma economia circular e solidária.
+              Para isso, foi criada uma ponte humana entre o excesso e a necessidade com
+              a ajuda de uma rede de Parcerias de fornecimento... </small>
+          </div>
+        </article>
+      </a>
+
+      <a href="#open-modal5">
+        <article>
+          <i class='bx bx-target-lock'></i>
+          <div>
+            <h4>Veste-te de Laranja!</h4>
+            <small>Tal como a maioria das Associações, a preocupação ambiental está
+              presente no dia a dia da H2HOthers.
+              Este Projeto nasceu num Pomar de Laranjas em Coruche e a ideia de Economia Circular com o objetivo
+              de...</small>
+          </div>
+        </article>
+      </a>
+
+      <a href="#open-modal6">
+        <article>
+          <i class='bx bx-target-lock'></i>
+          <div>
+            <h4>É tempo de Reciclar</h4>
+            <small>O aumento acelerado da população do planeta aliado ao consumo exagerado de produtos e ao
+              encaminhamento incorreto de resíduos têm contribuído
+              para um grave problema ambiental: a contínua produção de lixo.
+            </small>
+          </div>
+        </article>
+      </a>
+    </div>
+  </section>
+
+  <!--====================FIM DA SECCAO SOLIDARIEDADE ====================-->
+
+  <section id="voluntariado">
+    <h2>Área do Voluntário</h2>
+    <p>
+      Espaço reservado a utilizadores registados - conteúdo exclusivo
+    </p>
+
+    <div class="container voluntariado-container">
+      <div class="div voluntariado-left">
+
+        <video width="600" controls="true" autoplay="autoplay" loop="true" muted defaultmuted playsinline>
+          <source src="../videos/voluntario.mp4" type="video/mp4">
+
+          Your browser does not support HTML video.
+        </video>
+      </div>
+
+      <div class="div voluntariado-right">
+        <h1>Conteúdos Disponiveis para Voluntários</h1>
+        <a class="btn" onclick="window.location.href ='login';">Login</a>
+        <p>Após efetuar o registo, os voluntários têm acesso a uma página dedicada inteiramente a conteudos da H2HOthers
+          bem
+          como a uma loja online onde poderão adquirir artigos de merchandising cujas receitas reverterão a favor das
+          iniciativas
+          organizadas pela associação.</p>
+        <div class="voluntariado__cards">
+          <article class="voluntariado__card">
+            <span class="span volundariado__icon">
+              <i class="uil uil-store"></i>
+            </span>
+            <p>Loja Online</p>
+          </article>
+
+          <article class="voluntariado__card">
+            <span class="span volundariado__icon">
+              <i class="uil uil-calendar-alt"></i>
+            </span>
+            <p>Eventos</p>
+          </article>
+
+          <article class="voluntariado__card">
+            <span class="span volundariado__icon">
+              <i class="uil uil-comment-alt-dots"></i>
+            </span>
+            <p>Feedback</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!--====================FIM DA SECCAO VOLUNTARIADO ====================-->
+
+  <section id="eventos">
+    <h2>Divulgação de Eventos Solidários</h2>
+    <p>
+      Neste espaço partilhamos os eventos organizados por outras entidades da zona da Grande Lisboa
+      que se juntaram à H2HOthers
+    </p>
+
+    <div class="container">
+      <article>
+        <div class="eventos__image">
+          <img src="./images/evento1.jpg" alt="Evento 1" />
+        </div>
+        <div class="eventos__details">
+          <h4>Oportunidades de Voluntariado</h4>
+          <small>Bolsa de Voluntariado</small>
+        </div>
+        <div class="eventos__socials">
+          <a href="https://bolsadovoluntariado.pt/" target="blank"><i class="bx bx-world"></i></a>
+        </div>
+      </article>
+
+      <article>
+        <div class="eventos__image">
+          <img src="./images/evento2.jpg" alt="Evento 2" />
+        </div>
+        <div class="eventos__details">
+          <h4>Dia Solidário</h4>
+          <small>Just a Change</small>
+        </div>
+        <div class="eventos__socials">
+          <a href="https://www.justachange.pt/all-in" target="blank"><i class="bx bx-world"></i></a>
+        </div>
+      </article>
+
+      <article>
+        <div class="eventos__image">
+          <img src="./images/evento3.jpg" alt="Evento 3" />
+        </div>
+        <div class="eventos__details">
+          <h4>Village Impact Program</h4>
+          <small>Just a Change</small>
+        </div>
+        <div class="eventos__socials">
+          <a href="https://www.justachange.pt/all-in" target="blank"><i class="bx bx-world"></i></a>
+        </div>
+      </article>
+
+      <article>
+        <div class="eventos__image">
+          <img src="./images/evento4.jpg" alt="Evento 4" />
+        </div>
+        <div class="eventos__details">
+          <h4>Turnos Solidários</h4>
+          <small>Just a Change</small>
+        </div>
+        <div class="eventos__socials">
+          <a href="https://www.justachange.pt/all-in" target="blank"><i class="bx bx-world"></i></a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!--====================FIM DA SECCAO EVENTOS ====================-->
+
+  <section id="testemunhos" class="swiper mySwiper">
+    <h2>O que dizem os nossos voluntários</h2>
+    <p>
+      Nesta seccção apresentamos os comentários dos Voluntários
+      inscritos na nossa plataforma
+    </p>
+    <div id="comments" class="swiper-wrapper">
+
+    </div>
+    <div class="swiper-pagination"></div>
+  </section>
+
+  <!--====================FIM DA SECCAO TESTEMUNHOS ====================-->
+
+  <section id="inscrever">
+    <div class="container">
+      <div class="info">
+        <h2>Inscreva-se</h2>
+        <p>
+          Espaço reservado para a inscrição de Associações e Patrocinadores
+        </p>
+
+
+        <article>
+          <div class="info__icon">
+            <i class="bx bxs-group"></i>
+          </div>
+          <div>
+            <h4>Associações</h4>
+            <small>
+              Se representa uma associação e gostaria que a H2HOthers colaborasse nos seus projetos
+              ou iniciativas, inscreva-se e entraremos em contato, tão breve quanto possivel.
+            </small>
+          </div>
+        </article>
+        <article>
+          <div class="info__icon">
+            <i class="bx bx-money-withdraw"></i>
+          </div>
+          <div>
+            <h4>Patrocinadores</h4>
+            <small>
+              A H2HOthers procura Patrocinadores para os seus projetos
+              e para participar igualmente em iniciativas de outras associações.
+              Se pretender colaborar conosco, inscreva-se!
+              A H2HOthers agradece!
+            </small>
+          </div>
+        </article>
+      </div>
+      <form action="https://formspree.io/f/xvolwgnw" method="POST" { }>
+        <div class="form__group">
+          <label for="name">Nome / Designação Social</label>
+          <input type="text" placeholder="Introduza o seu nome ou designação social" name="Nome da Associação" id="name"
+            required />
+        </div>
+        <div class="form__group">
+          <label for="phone">Telefone</label>
+          <input type="number" placeholder="Introduza o seu nº de telefone" name="Contato do Voluntário" id="phone"
+            required />
+        </div>
+        <div class="form__group">
+          <label for="date">Data de Inscrição</label>
+          <input type="date" placeholder="Escolha uma data" name="Data" id="date" required />
+        </div>
+        <div class="form__group">
+          <label for="email">E-mail</label>
+          <input type="text" placeholder="Introduza o seu e-mail" name="E-mail do Voluntário" id="email" required />
+        </div>
+        <div class="form__group">
+          <label for="participation">Tipo de Participação</label>
+          <select name="Participação" id="participation" required>
+            <option value="Voluntariado">Associação</option>
+            <option value="Doação Monetária Unica">
+              Patrocinador - Doação Monetária Única
+            </option>
+            <option value="Doação Monetária Recorrente">
+              Patrocinador - Doação Monetária Recorrente
+            </option>
+            <option value="Doação de Bens">Patrocinador - Doação de Bens</option>
+          </select>
+        </div>
+        <div class="form__group">
+          <label for="message">Mensagem adicional</label>
+          <textarea name="Mensagem Adicional" id="message" rows="6" placeholder="Adicione uma mensagem"
+            required></textarea>
+        </div>
+        <input type="submit" value="Submeter pedido" class="btn-primary" />
+      </form>
+    </div>
+  </section>
+
+  <!--====================FIM DA SECCAO INSCREVER ====================-->
+
+  <footer>
+    <div class="container">
+      <article>
+        <a href="#" class="footer__logo">
+          <h3>H2HOthers</h3>
+        </a>
+        <p>
+          Plataforma criada para fins académicos
+        </p>
+        <div>
+          <i class="bx bxs-phone"></i>
+          <small>+351 211111111</small>
+        </div>
+        <div>
+          <i class="bx bx-mail-send"></i>
+          <small>ual.h2hothers@gmail.com</small>
+        </div>
+      </article>
+
+      <article>
+        <h3>Suporte</h3>
+        <a href="#">Politica de Privacidade</a>
+        <a href="#">Politica de Cookies</a>
+        <a href="#">Politica de Compras</a>
+        <a href="#">Condições Gerais</a>
+      </article>
+
+      <article>
+        <h3>Menu</h3>
+        <a href="#">Início</a>
+        <a href="#solidariedade">Solidariedade</a>
+        <a href="#eventos">Eventos</a>
+        <a href="#voluntariado">Voluntariado UAL</a>
+        <a href="#testemunhos">Testemunhos</a>
+        <a href="#inscrever" class="btn-primary">Inscreva-se já</a>
+      </article>
+
+      <article>
+        <h3>Contate-nos</h3>
+        <p>Noticias</p>
+        <p>FAQs</p>
+        <div class="footer__socials">
+          <a href="#"><i class="bx bxl-linkedin"></i></a>
+          <a href="#"><i class="bx bxl-twitter"></i></a>
+          <a href="#"><i class="bx bxl-facebook"></i></a>
+          <a href="#"><i class="bx bxl-instagram"></i></a>
+        </div>
+        <li><a class="btn_admin" onclick="window.location.href ='login_admin';">Página do Administrador</a></li>
+      </article>
+    </div>
+    <div class="copyright">
+      <small>&copy; Copyright H2HOthers. All Rights Reserved.</small>
+    </div>
+  </footer>
+
+  <!-- Swiper JS -->
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+
+  <!-- Some Scripts for Swiper and Nav Button-->
+
+  <script>
+    const navItems = document.querySelector("#nav__items");
+    const openNavBtn = document.querySelector("#open__nav-btn");
+    const closeNavBtn = document.querySelector("#close__nav-btn");
+
+    openNavBtn.addEventListener("click", () => {
+      navItems.style.display = "flex";
+      openNavBtn.style.display = "none";
+      closeNavBtn.style.display = "inline-block";
+    });
+
+    const closeNav = () => {
+      navItems.style.display = "none";
+      openNavBtn.style.display = "inline-block";
+      closeNavBtn.style.display = "none";
+    };
+
+    closeNavBtn.addEventListener("click", closeNav);
+
+    // close nav menu
+
+    if (window.innerWidth < 1024) {
+      document.querySelectorAll("#nav__items li a").forEach((navItem) => {
+        navItem.addEventListener("click", () => {
+          closeNav();
+        });
+      });
+    }
+
+    var swiper = new Swiper(".mySwiper", {
+      autoplay: { delay: 2000, },
+      slidesPerView: 1,
+      spaceBetween: 30,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+
+      // Responsive Breakpoints
+      breakpoints: {
+        // when window width is >= 600px
+        600: {
+          slidesPerView: 2,
+        },
+
+        // when window width is >= 600px
+        1024: {
+          slidesPerView: 3,
+        },
+      },
+    });
+  </script>
+
+
+
+
+  <!-- Main Script -->
+  <script src="../js/main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"
+    integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="/app.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>

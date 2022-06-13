@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="meusjavascripts/jquery-2.1.3.min.js" type="text/javascript"></script>
+
+    <!-- CSS  -->
+    
+    
+    <title>H2HOthers - Login</title>
+    <link rel="stylesheet" href="/css/style.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"/>
+    
+
+
+        <!--  ICONSCOUT CDN  -->
+        <link
+          rel="stylesheet"
+          href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css"
+        />
+    
+        <!--  BOXICONS CDN   -->
+        <link
+          href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+          rel="stylesheet"
+        />
+    
+    
+        <!-- Google Icons -->
+        <link
+          href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet"
+        />
+        
+</head>
+<body>
+    
+    <nav>
+        <div class="container">
+        <img class="card-img-top" src="../images/logo04062022.png" alt="Card image" style="width:6%">
+
+        <ul id="nav__items">
+            <li><a href="/">Página Inicial</a></li>
+            <li><a href="/Login">Login</a></li>
+            <li><a href="/Registar">Registar</a></li>
+        </ul>
+        </div>
+        </nav>
+        
+        <header>
+        <video autoplay muted loop id="myVideo">
+        <source src="../videos/login_4.mp4" type="video/mp4">
+         Your browser does not support HTML5 video.
+        </video>
+        
+          
+        <div class="container">
+            <div class="card">
+                <div class="card-header">
+                    Formulário de Login
+                </div>
+                <img class="card-img-top" src="../images/logo5.png" alt="Card image" style="width:50%">
+                <div class="card-body">
+                    <form action="/auth/login" method="POST">
+
+                        <div class="mb-3">
+                          <label for="email" class="form-label">Endereço de E-mail</label>
+                          <input type="email" class="form-control" id="email" name="email">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Senha</label>
+                            <input type="password" class="form-control" id="password" name="password">
+                          </div>
+
+                        <button type="submit" class="btn btn-primary">Login</button>
+                      </form>
+                </div>
+              </div>
+
+              <div id="messagelogin">
+              </div>
+              </div>
+
+            </header>
+
+            
+        
+<!--Bootstrap-->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="/app.js"></script>
+<script src="meusjavascripts/jquery-2.1.3.min.js" type="text/javascript"></script>
+
+
+</body>
+
+<footer>
+      <div class="container">
+        <article>
+          <a href="#" class="footer__logo"><h3>H2HOthers</h3></a>
+          <p>
+            Plataforma criada para fins académicos
+          </p>
+          <div>
+            <i class="bx bxs-phone"></i>
+            <small>+351 211111111</small>
+          </div>
+          <div>
+            <i class="bx bx-mail-send"></i>
+            <small>ual.h2hothers@gmail.com</small>
+          </div>
+        </article>
+
+        <article>
+          <h3>Suporte</h3>
+          <a href="#">Politica de Privacidade</a>
+          <a href="#">Politica de Cookies</a>
+          <a href="#">Politica de Compras</a>
+          <a href="#">Condições Gerais</a>
+        </article>
+
+        <article>
+          <h3>Menu</h3>
+          <a href="#">Início</a>
+          <a href="#solidariedade">Solidariedade</a>
+          <a href="#eventos">Eventos</a>
+          <a href="#voluntariado">Voluntariado UAL</a>
+          <a href="#testemunhos">Testemunhos</a>
+          <a href="#inscrever" class="btn-primary">Inscreva-se já</a>
+        </article>
+
+        <article>
+          <h3>Contate-nos</h3>
+          <p>Noticias</p>
+          <p>FAQs</p>
+          <div class="footer__socials">
+            <a href="#"><i class="bx bxl-linkedin"></i></a>
+            <a href="#"><i class="bx bxl-twitter"></i></a>
+            <a href="#"><i class="bx bxl-facebook"></i></a>
+            <a href="#"><i class="bx bxl-instagram"></i></a>
+          </div>
+        </article>
+      </div>
+      <div class="copyright">
+        <small>&copy; Copyright H2HOthers. All Rights Reserved.</small>
+      </div>
+    </footer>
+    
+</html>

@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <!-- CSS  -->
+  <link rel="stylesheet" href="/css/style.min.css" />
+
+  <title>H2HOthers - Página Reservada a Administradores</title>
+
+
+  <!--  ICONSCOUT CDN  -->
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css" />
+
+  <!--  BOXICONS CDN   -->
+  <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+
+
+  <!-- Google Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+  <script src="../js/main.js"></script>
+
+</head>
+
+
+
+<nav>
+
+  <div class="container">
+    <img class="card-img-top" src="../images/logo04062022.png" alt="Card image" style="width:6%">
+    <a href="h3" class="nav__logo">
+      <h3>H2HOthers - Página de Administrador </h3>
+    </a>
+
+    <ul id="nav__items">
+      <li><a href="/">Página Inicial</a></li>
+      <li><a href="/voluntario">Voluntario</a></li>
+      <li><a href="/auth/logout">Logout</a></li>
+      <li><a class="btn cta" onclick="window.location.href ='loja';">Loja Online</a></li>
+    </ul>
+
+    <button id="open__nav-btn"><i class="bx bx-menu"></i></button>
+    <button id="close__nav-btn"><i class="bx bx-x"></i></button>
+  </div>
+</nav>
+
+<br>
+<br>
+<br>
+<div class="admin"></div>
+<div class="container_admin">
+  <!-- Cartão 1-->
+  <div class="card2 card-1">
+    <!-- Cartão Header-->
+    <div class="card2-header">
+      <img src="../images/database.gif" class="card2-img" />
+    </div>
+    <!-- Cartão Body-->
+    <div class="card2-body">
+      <h2 class="card2-titulo">Gestão de Administradores</h2>
+    </div>
+    <!-- Cartão Footer-->
+    <div class="card2-footer">
+      <a href="#open-modal_admin">Entrar</a>
+    </div>
+  </div>
+
+  <!-- Cartão 2-->
+  <div class="card2 card-2">
+    <!-- Cartão Header-->
+    <div class="card2-header">
+      <img src="../images/voluntario_admin.gif" class="card2-img" />
+    </div>
+    <!-- Cartão Body-->
+    <div class="card2-body">
+      <h2 class="card2-titulo">Gestão de Voluntários</h2>
+    </div>
+    <!-- Cartão Footer-->
+    <div class="card2-footer">
+      <a href="#open-modal_volun">Entrar</a>
+    </div>
+  </div>
+
+  <!-- Cartão 3 -->
+  <div class="card2 card-2">
+    <!-- Cartão Header-->
+    <div class="card2-header">
+      <img src="../images/associacoes_admin.gif" class="card2-img" />
+    </div>
+    <!-- Cartão Body-->
+    <div class="card2-body">
+      <h2 class="card2-titulo">Gestão de Associações</h2>
+    </div>
+    <!-- Cartão Footer-->
+    <div class="card2-footer">
+      <a href="#open-modal_ass">Entrar</a>
+    </div>
+  </div>
+
+  <!-- Cartão 4 -->
+  <div class="card2 card-2">
+    <!-- Cartão Header-->
+    <div class="card2-header">
+      <img src="../images/patrocinios_admin.gif" class="card2-img" />
+    </div>
+    <!-- Cartão Body-->
+    <div class="card2-body">
+      <h2 class="card2-titulo">Gestão de Patrocinadores</h2>
+    </div>
+    <!-- Cartão Footer-->
+    <div class="card2-footer">
+      <a href="#open-modal_patro">Entrar</a>
+    </div>
+  </div>
+
+  <!-- Cartão 5 -->
+  <div class="card2 card-2">
+    <!-- Cartão Header-->
+    <div class="card2-header">
+      <img src="../images/conteudos_admin.gif" class="card2-img" />
+    </div>
+    <!-- Cartão Body-->
+    <div class="card2-body">
+      <h2 class="card2-titulo">Gestão de Conteúdos</h2>
+    </div>
+    <!-- Cartão Footer-->
+    <div class="card2-footer">
+      <a href="#open-modal_conteudos">Entrar</a>
+    </div>
+  </div>
+
+  <!-- Cartão 5 -->
+  <div class="card2 card-2">
+    <!-- Cartão Header-->
+    <div class="card2-header">
+      <img src="../images/eventos_admin.gif" class="card2-img" />
+    </div>
+    <!-- Cartão Body-->
+    <div class="card2-body">
+      <h2 class="card2-titulo">Gestão de Inscrições em Eventos</h2>
+    </div>
+    <!-- Cartão Footer-->
+    <div class="card2-footer">
+      <a href="#open-modal_eventos">Entrar</a>
+    </div>
+  </div>
+
+  <!-- Cartão 5 -->
+  <div class="card2 card-2">
+    <!-- Cartão Header-->
+    <div class="card2-header">
+      <img src="../images/contabilidade_admin.gif" class="card2-img" />
+    </div>
+    <!-- Cartão Body-->
+    <div class="card2-body">
+      <h2 class="card2-titulo">Gestão Financeira</h2>
+    </div>
+    <!-- Cartão Footer-->
+    <div class="card2-footer">
+      <a href="http://www.stripe.com" target="blank">Entrar</a>
+    </div>
+  </div>
+
+</div>
+</div>
+
+
+<!--====================MODALS===================-->
+
+<div id="open-modal_admin" class="modal-window">
+  <div>
+    <a href="#" title="Close" class="modal-close">Fechar</a>
+    <h3>Gestão de Administradores</h3>
+    <div class="modal-body">
+      <button type="button" class="btn btn-primary" onclick="getAdmin()">Consultar Administradores</button>
+      <div id="listaAdministradores"></div>
+
+      <div class="card-body">
+        <h4>Registar Administradores</h4>
+        <form action="/auth/register_admin" method="POST">
+          <div class="mb-3">
+            <label for="name" class="form-label">Nome</label>
+            <input type="text" class="form-control" id="name" name="name">
+          </div>
+
+          <div class="mb-3">
+            <label for="email" class="form-label">Endereço de E-mail</label>
+            <input type="email" class="form-control" id="email" name="email">
+          </div>
+
+          <div class="mb-3">
+            <label for="password" class="form-label">Senha</label>
+            <input type="password" class="form-control" id="password" name="password">
+          </div>
+
+          <div class="mb-3">
+            <label for="passwordConfirm" class="form-label">Confirmar Senha</label>
+            <input type="password" class="form-control" id="passwordConfirm" name="passwordConfirm">
+          </div>
+          <button type="submit" class="btn-registar">Registar Administrador</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<div id="open-modal_volun" class="modal-window">
+  <div>
+    <a href="#" title="Close" class="modal-close">Fechar</a>
+    <h3>Gestão de Voluntários</h3>
+    <div class="modal-body">
+
+
+      <div class="card-body">
+        <h4>Eliminar Voluntários</h4>
+        <form action="/auth/delete_Vol" method="GET">
+          <div class="mb-3">
+            <label for="email" class="form-label">Endereço de E-mail</label>
+            <input type="email" class="form-control" id="email_vol" name="email">
+          </div>
+          <button type="submit" class="btn-eliminar">Eliminar</button>
+        </form>
+        <h4>Gerar ficheiro .csv com extração de voluntários registados</h4>
+        <form action="/auth/exportcsvvolun" method="GET">
+
+
+          <button type="submit" class="btn-registar">Gerar Ficheiro</button>
+        </form>
+        <br>
+        <h4>Efetuar o download do ficheiro</h4>
+        <a href="../uploads/voluntarios.csv" download="voluntarios.csv">Download</a>
+
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<div id="open-modal_ass" class="modal-window">
+  <div>
+    <a href="#" title="Close" class="modal-close">Fechar</a>
+    <h3>Gestão de Associações</h3>
+    <div class="modal-body">
+
+      <div class="card-body">
+        <h4>Registar Associações</h4>
+        <form action="/auth/register_ass" method="POST">
+          <div class="mb-3">
+            <label for="name" class="form-label">Nome</label>
+            <input type="text" class="form-control" id="name_ass" name="name">
+          </div>
+
+          <div class="mb-3">
+            <label for="email" class="form-label">Endereço de E-mail</label>
+            <input type="email" class="form-control" id="email_ass" name="email">
+          </div>
+
+          <div class="mb-3">
+            <label for="tlf" class="form-label">Telefone</label>
+            <input type="text" class="form-control" id="tlf_ass" name="tlf">
+          </div>
+
+          <div class="mb-3">
+            <label for="date" class="form-label">Data Inscrição</label>
+            <input type="date" class="form-control" id="date_ass" name="date">
+          </div>
+
+          <div class="mb-3">
+            <label for="info" class="form-label">Informação Adicional</label>
+            <textarea class="form-control" id="info_ass" name="info"></textarea>
+
+          </div>
+
+          <button type="submit" class="btn-registar">Registar Associação</button>
+        </form>
+
+        <h4>Eliminar Associação</h4>
+        <form action="/auth/delete_ass" method="GET">
+          <div class="mb-3">
+            <label for="email" class="form-label">Endereço de E-mail</label>
+            <input type="email" class="form-control" id="email_ass" name="email">
+          </div>
+          <button type="submit" class="btn-eliminar">Eliminar</button>
+        </form>
+
+        <h4>Gerar ficheiro csv com extração de associações registadas</h4>
+        <form action="/auth/exportcsvass" method="GET">
+
+
+          <button type="submit" class="btn-registar">Gerar Ficheiro</button>
+        </form>
+        <br>
+        <h4>Efetuar o download do ficheiro</h4>
+        <a href="../uploads/associacoes.csv" download="associacoes.csv">Download</a>
+
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div id="open-modal_patro" class="modal-window">
+  <div>
+    <a href="#" title="Close" class="modal-close">Fechar</a>
+    <h3>Gestão de Patrocinadores</h3>
+    <div class="modal-body">
+
+      <div class="card-body">
+        <h4>Registar Patrocinadores</h4>
+        <form action="/auth/register_ptr" method="POST">
+          <div class="mb-3">
+            <label for="name" class="form-label">Nome</label>
+            <input type="text" class="form-control" id="name_ptr" name="name">
+          </div>
+
+          <div class="mb-3">
+            <label for="email" class="form-label">Endereço de E-mail</label>
+            <input type="email" class="form-control" id="email_ptr" name="email">
+          </div>
+
+          <div class="mb-3">
+            <label for="tlf" class="form-label">Telefone</label>
+            <input type="text" class="form-control" id="tlf_ptr" name="tlf">
+          </div>
+
+          <div class="mb-3">
+            <label for="date" class="form-label">Data Inscrição</label>
+            <input type="date" class="form-control" id="date_ptr" name="date">
+          </div>
+
+          <div class="mb-3">
+            <label for="info" class="form-label">Informação Adicional</label>
+            <textarea class="form-control" id="info_ptr" name="info"></textarea>
+
+          </div>
+
+          <button type="submit" class="btn-registar">Registar Associação</button>
+        </form>
+
+        <h4>Eliminar Patrocinador</h4>
+        <form action="/auth/delete_ptr" method="GET">
+          <div class="mb-3">
+            <label for="email" class="form-label">Endereço de E-mail</label>
+            <input type="email" class="form-control" id="email_ptr" name="email">
+          </div>
+          <button type="submit" class="btn-eliminar">Eliminar</button>
+        </form>
+
+        <h4>Gerar ficheiro csv com extração de patrocinadores registados</h4>
+        <form action="/auth/exportcsvptr" method="GET">
+
+
+          <button type="submit" class="btn-registar">Gerar Ficheiro</button>
+        </form>
+        <br>
+        <h4>Efetuar o download do ficheiro</h4>
+        <a href="../uploads/patrocinadores.csv" download="patrocinadores.csv">Download</a>
+
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div id="open-modal_conteudos" class="modal-window">
+  <div>
+    <a href="#" title="Close" class="modal-close">Fechar</a>
+    <h3>Gestão de Conteudos</h3>
+    <div class="modal-body">
+      <div class="card-body">
+        <h4>Alterar Eventos Internos</h4>
+        <p>Para efetuar a alteração de eventos internos deverá efetuar
+          o upload dos ficheiros, cumprindo a numenclatura indicada na seguinte tabela: </p>
+        <img src="../images/regras.jpg">
+        <br>
+        <form action="/auth/multiple" method="POST" enctype="multipart/form-data">
+          <input type="file" name="files" multiple />
+
+          <button type="submit" class="btn-registar">Upload</button>
+        </form>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div id="open-modal_eventos" class="modal-window">
+  <div>
+    <a href="#" title="Close" class="modal-close">Fechar</a>
+    <h3>Gestão de Inscrições</h3>
+    <div class="modal-body">
+
+      <div class="card-body">
+        <h4>Criar ficheiro csv com as inscrições realizadas</h4>
+        <form action="/auth/exportcsv" method="GET">
+
+
+          <button type="submit" class="btn-registar">Gerar Ficheiro</button>
+        </form>
+        <br>
+        <h4>Efetuar o download do ficheiro</h4>
+        <a href="../uploads/inscricao_eventos.csv" download="inscricoes.csv">Download</a>
+
+        </form>
+
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!--====================SCRIPT PARA ABRIR O EXCEL====================-->
+
+<script type="text/javascript">
+  function openexcel() {
+    var Excel = new ActiveXObject("Excel.Application");
+    Excel.Visible = true;
+    Excel.Workbooks.Open("../inscricao_eventos.csv");
+  }
+</script>
+
+
+<!--====================FIM DO HEADER====================-->
+
+<body>
+
+
+<script>
+  const navItems = document.querySelector("#nav__items");
+  const openNavBtn = document.querySelector("#open__nav-btn");
+  const closeNavBtn = document.querySelector("#close__nav-btn");
+
+  openNavBtn.addEventListener("click", () => {
+    navItems.style.display = "flex";
+    openNavBtn.style.display = "none";
+    closeNavBtn.style.display = "inline-block";
+  });
+
+  const closeNav = () => {
+    navItems.style.display = "none";
+    openNavBtn.style.display = "inline-block";
+    closeNavBtn.style.display = "none";
+  };
+
+  closeNavBtn.addEventListener("click", closeNav);
+
+  // close nav menu
+
+  if (window.innerWidth < 1024) {
+    document.querySelectorAll("#nav__items li a").forEach((navItem) => {
+      navItem.addEventListener("click", () => {
+        closeNav();
+      });
+    });
+  }
+
+
+</script>
+
+<script src="../js/load.js"></script>
+
+
+</body>
+
+<footer>
+  <div class="container">
+    <article>
+      <a href="#" class="footer__logo">
+        <h3>H2HOthers</h3>
+      </a>
+      <p>
+        Plataforma criada para fins académicos
+      </p>
+      <div>
+        <i class="bx bxs-phone"></i>
+        <small>+351 211111111</small>
+      </div>
+      <div>
+        <i class="bx bx-mail-send"></i>
+        <small>ual.h2hothers@gmail.com</small>
+      </div>
+    </article>
+
+    <article>
+      <h3>Suporte</h3>
+      <a href="#">Politica de Privacidade</a>
+      <a href="#">Politica de Cookies</a>
+      <a href="#">Politica de Compras</a>
+      <a href="#">Condições Gerais</a>
+    </article>
+
+    <article>
+      <h3>Menu</h3>
+      <a href="#">Início</a>
+      <a href="#solidariedade">Solidariedade</a>
+      <a href="#eventos">Eventos</a>
+      <a href="#voluntariado">Voluntariado UAL</a>
+      <a href="#testemunhos">Testemunhos</a>
+      <a href="#inscrever" class="btn-primary">Inscreva-se já</a>
+    </article>
+
+    <article>
+      <h3>Contate-nos</h3>
+      <p>Noticias</p>
+      <p>FAQs</p>
+      <div class="footer__socials">
+        <a href="#"><i class="bx bxl-linkedin"></i></a>
+        <a href="#"><i class="bx bxl-twitter"></i></a>
+        <a href="#"><i class="bx bxl-facebook"></i></a>
+        <a href="#"><i class="bx bxl-instagram"></i></a>
+      </div>
+    </article>
+  </div>
+  <div class="copyright">
+    <small>&copy; Copyright H2HOthers. All Rights Reserved.</small>
+  </div>
+</footer>
+
+</html>
