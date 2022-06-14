@@ -146,6 +146,7 @@ nav .container a {
   color: #ffffff;
   font-weight: 400;
   font-size: 0.9rem;
+  text-decoration: none;
 }
 nav .container .nav__logo img {
   color: #ffffff;
