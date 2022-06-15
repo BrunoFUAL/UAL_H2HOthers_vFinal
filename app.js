@@ -56,6 +56,6 @@ app.use('/checkout', require('./routes/checkout'))
 
 app.use('/auth', require('./routes/auth'));
 
-app.listen(process.env.PORT || 3306, () => {
-    console.log("Server started on Port 3306")
+app.listen(process.env.PORT || 5000, () => {
+    console.log("Server started on Port 5000")
 })

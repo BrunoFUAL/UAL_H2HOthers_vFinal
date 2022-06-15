@@ -8,12 +8,12 @@ const mysql = require("mysql");
 
 
 
-// const db = mysql.createConnection({
-//     host: 'localhost',
-//     user: 'root',
-//     password: '',
-//     database: 'h2hothers'
-// })
+const db = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: '',
+    database: 'h2hothers'
+})
 
 router.get('/', (req, res) => {
     res.render(path.join(__dirname, '../public/views/index.hbs'));
