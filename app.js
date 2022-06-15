@@ -23,6 +23,8 @@ app.use(express.json()); // Faz o parse (validação e interpretação) de solic
 app.use(cookieParser());
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'hbs');
+app.set('views', './public/views');
+
 
 
 //Acessos Base de Dados

@@ -608,7 +608,7 @@ header .overlay .content img {
 }
 
 .voluntariado__card:hover {
-  background-image: url("/images/tshirt.png");
+  background-image: url("/images/tshirt_2.png");
   box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.3);
   color: orange;
   font-weight: bold;
@@ -919,16 +919,35 @@ header .overlay .content img {
 
 .image img {
   width: 100%;
+  border-left: 15px solid #3EC8AC;
+  border-right: 15px solid #4E90A4;
+  border-radius: 5px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-position: 0 0, 0 100%;
+  background-repeat: no-repeat;
+  -webkit-background-size: 100% 20px;
+  -moz-background-size: 100% 20px;
+  background-size: 100% 20px;
+  background-image: -webkit-linear-gradient(left, #3EC8AC 0%, #4E90A4 100%), -webkit-linear-gradient(left, #3EC8AC 0%, #4E90A4 100%);
+  background-image: -moz-linear-gradient(left, #3EC8AC 0%, #4E90A4 100%), -moz-linear-gradient(left, #3EC8AC 0%, #4E90A4 100%);
+  background-image: -o-linear-gradient(left, #3EC8AC 0%, #4E90A4 100%), -o-linear-gradient(left, #3EC8AC 0%, #4E90A4 100%);
+  background-image: linear-gradient(to right, #3EC8AC 0%, #4E90A4 100%), linear-gradient(to right, #3EC8AC 0%, #4E90A4 100%);
 }
 
 .add-cart {
   position: absolute;
   width: 100%;
-  background-color: #27B6D9;
+  background: linear-gradient(135deg, #480ca8, #4cc9f0);
+  color: #ffffff;
   transition: all 0.3s ease-in-out;
   opacity: 0;
   cursor: pointer;
   text-align: center;
+}
+.add-cart h1, .add-cart h2, .add-cart h3, .add-cart h4, .add-cart h5 {
+  color: #ffffff;
 }
 
 .showAddCart {

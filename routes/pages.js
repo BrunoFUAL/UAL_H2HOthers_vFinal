@@ -93,7 +93,6 @@ router.post('/insert', (req, res) => {
         });
 
         res.end("Sucesso!");
-    
 })
 
 

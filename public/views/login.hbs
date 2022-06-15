@@ -40,7 +40,7 @@
     <nav>
         <div class="container">
         <img class="card-img-top" src="../images/logo04062022.png" alt="Card image" style="width:6%">
-
+        <h3>H2HOthers - Página do Voluntário - LOGIN </h3>
         <ul id="nav__items">
             <li><a href="/">Página Inicial</a></li>
             <li><a href="/Login">Login</a></li>
@@ -61,6 +61,9 @@
                 <div class="card-header">
                     Formulário de Login
                 </div>
+                {{#if message}}
+                <p class="alert alert-danger mt-4">{{message}}</p>
+                {{/if}}
                 <img class="card-img-top" src="../images/logo5.png" alt="Card image" style="width:50%">
                 <div class="card-body">
                     <form action="/auth/login" method="POST">

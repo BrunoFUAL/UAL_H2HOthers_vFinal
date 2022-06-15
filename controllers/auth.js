@@ -35,12 +35,12 @@ exports.register = async (req, res) => {
       }
       if (results.length > 0) {
         return (
-          res.status(200).redirect("/registar"),
+          res.render('register', {message: 'Utilizador existente, tente novamente ou efetue o login'}),
           console.log("E-mail existente")
         );
       } else if (password !== passwordConfirm) {
         return (
-          res.status(200).redirect("/registar"),
+          res.render('register', {message: 'Passwords não coincidem, tente novamente'}),
           console.log("Passwords não coincidem")
         );
       }
@@ -71,7 +71,7 @@ exports.login = async (req, res) => {
 
     if (!email || !password) {
       return (
-        res.status(400).redirect("/login"),
+        res.render('login', {message: 'Por favor, preencha e-mail e password'}),
         console.log("por favor preencha e-mail e password")
       );
     }
@@ -85,7 +85,7 @@ exports.login = async (req, res) => {
           !results ||
           !(await bcrypt.compare(password, results[0].password))
         ) {
-          res.status(401).sendFile("/views/login.hbs", { root: "./public" }),
+          res.render('login', {message: 'E-mail ou password incorretos'}),
             console.log("E-mail ou password incorreto");
         } else {
           const id = results[0].id;
@@ -254,12 +254,12 @@ exports.register_admin = async (req, res) => {
       }
       if (results.length > 0) {
         return (
-            res.status(400).redirect("/admin"),
+          res.render('admin', {message: 'Administrador já registado'}),
           console.log("E-mail existente")
         );
       } else if (password !== passwordConfirm) {
         return (
-            res.status(400).redirect("/admin"),
+          res.render('admin', {message: 'Passwords não coincidem'}),
           console.log("Passwords não coincidem")
         );
       }
@@ -273,7 +273,7 @@ exports.register_admin = async (req, res) => {
             console.log(error);
           } else {
             return (
-              res.status(400).redirect("/admin"),
+              res.render('admin', {message: 'Administrador registado com sucesso'}),
               console.log("Utilizador registado"),
               console.log(results)
             );
@@ -288,7 +288,7 @@ exports.register_admin = async (req, res) => {
 exports.delete_vol = (req, res) => {
   const email = req.body.email;
   db.query("DELETE from users WHERE email = email", async (error, results) => {
-    res.status(200).redirect("/admin");
+    res.render('admin', {message: 'Voluntário Eliminado com sucesso'}),
     console.log(results);
   });
 
@@ -306,7 +306,7 @@ exports.register_ass = async (req, res) => {
       }
       if (results.length > 0) {
         return (
-          res.status(400).redirect("/admin"),
+          res.render('admin', {message: 'Associação já existente'}),
           console.log("E-mail existente")
         );
       } 
@@ -318,7 +318,7 @@ exports.register_ass = async (req, res) => {
             console.log(error);
           } else {
             return (
-              res.status(400).redirect("/admin"),
+              res.render('admin', {message: 'Associação registada com sucesso'}),
               console.log("Associação Registada"),
               console.log(results)
             );
@@ -334,7 +334,7 @@ exports.register_ass = async (req, res) => {
 exports.delete_ass = (req, res) => {
   const email = req.body.email;
   db.query("DELETE from associacoes WHERE email = email", async (error, results) => {
-    res.status(200).redirect("/admin");
+    res.render('admin', {message: 'Associação eliminada com sucesso'}),
     console.log(results);
   });
 
@@ -352,7 +352,7 @@ exports.register_ptr = async (req, res) => {
       }
       if (results.length > 0) {
         return (
-          res.status(400).redirect("/admin"),
+          res.render('admin', {message: 'Patrocinador já registado'}),
           console.log("E-mail existente")
         );
       } 
@@ -364,8 +364,8 @@ exports.register_ptr = async (req, res) => {
             console.log(error);
           } else {
             return (
-              res.status(400).redirect("/admin"),
-              console.log("Associação Registada"),
+              res.render('admin', {message: 'Patrocinador registado com sucesso'}),
+              console.log("Patrocinador Registado"),
               console.log(results)
             );
           }
@@ -379,7 +379,7 @@ exports.register_ptr = async (req, res) => {
 exports.delete_ptr = (req, res) => {
   const email = req.body.email;
   db.query("DELETE from patrocinadores WHERE email = email", async (error, results) => {
-    res.status(200).redirect("/admin");
+    res.render('admin', {message: 'Patrocinador eliminado com sucesso'}),
     console.log(results);
   });
 
@@ -389,19 +389,6 @@ exports.delete_ptr = (req, res) => {
 exports.register_events = async (req, res) => {
   console.log(req.body);
   const { name, email, tlf, date, event } = req.body;
-  db.query(
-    "SELECT email FROM eventos WHERE email = ?",
-    [email],
-    async (error, results) => {
-      if (error) {
-        console.log(error);
-      }
-      if (results.length > 0) {
-        return (
-          res.status(400).redirect("/voluntario"),
-          console.log("E-mail existente")
-        );
-      } 
       db.query(
         "INSERT INTO eventos SET ?",
         { name: name, email: email, tlf: tlf, date: date, event: event },
@@ -410,15 +397,13 @@ exports.register_events = async (req, res) => {
             console.log(error);
           } else {
             return (
-              res.status(400).redirect("/voluntario"),
+              res.render('voluntario', {message: 'Registo efetuado'}),
               console.log("Inscrição Registada"),
               console.log(results)
             );
           }
         }
       );
-    }
-  );
 };
 
 exports.consult_insceventos = async (req, res) => {

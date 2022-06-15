@@ -5,7 +5,7 @@ exports.productList = [
         tag : 'bone',
         price: 10,
         inCart: 0,
-        image: 'https://h2hothers-loja.fra1.digitaloceanspaces.com/bone.png',
+        image: 'https://imagesual.fra1.digitaloceanspaces.com/bone.png',
     },
 
     {
@@ -14,7 +14,7 @@ exports.productList = [
         tag : 'caderno',
         price: 8,
         inCart: 0,
-        image: 'https://h2hothers-loja.fra1.digitaloceanspaces.com/caderno.png',
+        image: 'https://imagesual.fra1.digitaloceanspaces.com/caderno.png',
     },
 
     {
@@ -23,7 +23,7 @@ exports.productList = [
         tag : 'tshirt',
         price: 15,
         inCart: 0,
-        image: 'https://h2hothers-loja.fra1.digitaloceanspaces.com/tshirt.png',
+        image: 'https://imagesual.fra1.digitaloceanspaces.com/tshirt.png',
     },
 
     {
@@ -32,7 +32,7 @@ exports.productList = [
         tag : 'camisola',
         price: 20,
         inCart: 0,
-        image: 'https://h2hothers-loja.fra1.digitaloceanspaces.com/camisola.png',
+        image: 'https://imagesual.fra1.digitaloceanspaces.com/camisola.png',
     },
     {
         name: 'Caneca',
@@ -40,7 +40,7 @@ exports.productList = [
         tag : 'caneca',
         price: 6,
         inCart: 0,
-        image: 'https://h2hothers-loja.fra1.digitaloceanspaces.com/caneca.png',
+        image: 'https://imagesual.fra1.digitaloceanspaces.com/caneca.png',
     },
     {
         name: 'Caneta',
@@ -48,7 +48,7 @@ exports.productList = [
         tag : 'caneta',
         price: 4,
         inCart: 0,
-        image: 'https://h2hothers-loja.fra1.digitaloceanspaces.com/caneta.png',
+        image: 'https://imagesual.fra1.digitaloceanspaces.com/caneta.png',
     },
     {
         name: 'Chavena',
@@ -56,7 +56,7 @@ exports.productList = [
         tag : 'chavena',
         price: 5,
         inCart: 0,
-        image: 'https://h2hothers-loja.fra1.digitaloceanspaces.com/chavena.png',
+        image: 'https://imagesual.fra1.digitaloceanspaces.com/chavena.png',
     },
     {
         name: 'Colunas Bluetooth',
@@ -64,7 +64,7 @@ exports.productList = [
         tag : 'colunasbluetooth',
         price: 22,
         inCart: 0,
-        image: 'https://h2hothers-loja.fra1.digitaloceanspaces.com/colunas.png',
+        image: 'https://imagesual.fra1.digitaloceanspaces.com/colunasbluetooth.png',
     },
     {
         name: 'Garrafa Inox',
@@ -72,7 +72,7 @@ exports.productList = [
         tag : 'garrafainox',
         price: 7,
         inCart: 0,
-        image: 'https://h2hothers-loja.fra1.digitaloceanspaces.com/garrafa.png',
+        image: 'https://imagesual.fra1.digitaloceanspaces.com/garrafainox.png',
     },
     {
         name: 'Urso',
@@ -80,7 +80,7 @@ exports.productList = [
         tag : 'urso',
         price: 5,
         inCart: 0,
-        image: 'https://h2hothers-loja.fra1.digitaloceanspaces.com/urso.png',
+        image: 'https://imagesual.fra1.digitaloceanspaces.com/urso.png',
     },
     {
         name: 'Mochila',
@@ -88,7 +88,7 @@ exports.productList = [
         tag : 'mochila',
         price: 12,
         inCart: 0,
-        image: 'https://h2hothers-loja.fra1.digitaloceanspaces.com/mochila.png',
+        image: 'https://imagesual.fra1.digitaloceanspaces.com/mochila.png',
     },
     {
         name: 'Saco',
@@ -96,7 +96,7 @@ exports.productList = [
         tag : 'saco',
         price: 6,
         inCart: 0,
-        image: 'https://h2hothers-loja.fra1.digitaloceanspaces.com/saco.png',
+        image: 'https://imagesual.fra1.digitaloceanspaces.com/saco.png',
     },
 
 ]

@@ -38,7 +38,7 @@
     <nav>
         <div class="container">
         <img class="card-img-top" src="../images/logo04062022.png" alt="Card image" style="width:6%">
-        <a href="h3" class="nav__logo"><h3>H2HOthers - Área do Voluntário</h3></a>
+        <h3>H2HOthers - Página do Voluntário - Registar </h3>
 
         <ul>
             <li><a href="/">Página Inicial</a></li>
@@ -60,6 +60,9 @@
                   
                     Formulário de Registo
                 </div>
+              {{#if message}}
+              <p class="alert alert-danger mt-4">{{message}}</p>
+              {{/if}}
                 <img class="card-img-top" src="../images/logo5.png" alt="Card image" style="width:50%">
                 <div class="card-body">
                     <form action="/auth/register" method="POST">
@@ -87,6 +90,8 @@
                       </form>
                 </div>
               </div>
+
+
 
               </div>
 
