@@ -67,7 +67,7 @@ router.get('/home', (req, res) => {
     res.setHeader('Content-Type', 'application/json');
 
     db.query('SELECT * from comments', function(error, results, fields){
-        if(error) throw error;
+        // if(error) throw error;
     
         var comments = JSON.stringify(results);
     
