@@ -6,7 +6,8 @@
   "scripts": {
     "sass-watch": "sass --no-source-map --watch styles/style.scss public/css/style.min.css",
     "nodemon-watch": "nodemon app.js -e *",
-    "dev": "npm-run-all --parallel sass-watch nodemon-watch"
+    "dev": "npm-run-all --parallel sass-watch nodemon-watch",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
