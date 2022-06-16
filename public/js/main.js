@@ -1,5 +1,5 @@
 let carts = document.querySelectorAll(".add-cart");
-let stage = 'prod';
+let stage = 'prd';
 let products = [];
 
 async function getProducts() {
