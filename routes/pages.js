@@ -6,14 +6,19 @@ const router = express.Router();
 const path = require('path');
 const mysql = require("mysql");
 
+let connection;
 
-
-const db = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '',
-    database: 'h2hothers'
+if (process.env.JAWSDB_URL){
+    connection = mysql.createConnection(process.env.JAWSDB_URL);
+} else {
+    connection = mysql.createConnection({
+    host: process.env.DATABASE_HOST,
+    user: process.env.DATABASE_USER,
+    password: process.env.DATABASE_PASSWORD,
+    database: process.env.DATABASE
 })
+}
+
 
 router.get('/', (req, res) => {
     res.render(path.join(__dirname, '../public/views/index.hbs'));

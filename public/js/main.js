@@ -1,9 +1,9 @@
 let carts = document.querySelectorAll(".add-cart");
-let stage = 'dev';
+let stage = 'prod';
 let products = [];
 
 async function getProducts() {
-  const host = stage === 'dev' ? 'http://localhost:5000' : 'https://h2hothers.com';
+  const host = stage === 'dev' ? 'http://localhost:3306' : 'https://h2hothers.herokuapp.com';
   const response = await axios.get(`${host}/products`);
   console.log(response.data);
   products = response.data.products;

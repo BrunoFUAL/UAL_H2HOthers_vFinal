@@ -29,21 +29,26 @@ app.set('views', './public/views');
 
 //Acessos Base de Dados
 
-const db = mysql.createConnection({
+let connection;
+
+if (process.env.JAWSDB_URL){
+    connection = mysql.createConnection(process.env.JAWSDB_URL);
+} else {
+    connection = mysql.createConnection({
     host: process.env.DATABASE_HOST,
     user: process.env.DATABASE_USER,
     password: process.env.DATABASE_PASSWORD,
     database: process.env.DATABASE
 })
+}
 
-
-db.connect((error) => {
-    if(error){
-        console.log(error)
-    }else {
-        console.log("MYSQL Connected...")
-    }
-})
+// db.connect((error) => {
+//     if(error){
+//         console.log(error)
+//     }else {
+//         console.log("MYSQL Connected...")
+//     }
+// })
 
 
 // Define Rotas//
@@ -56,6 +61,6 @@ app.use('/checkout', require('./routes/checkout'))
 
 app.use('/auth', require('./routes/auth'));
 
-app.listen(process.env.PORT || 5000, () => {
-    console.log("Server started on Port 5000")
+app.listen(process.env.PORT || 3306, () => {
+    console.log("Server started on Port 3306")
 })
