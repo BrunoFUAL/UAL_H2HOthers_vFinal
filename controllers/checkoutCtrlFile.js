@@ -52,7 +52,7 @@ exports.checkoutCtrlFunction = async (req, res) => {
     }
   }
 
-exports.cartSuccessFunction = (req,res) => {
+exports.cartSuccessFunction = async (req,res) => {
     res.render(path.join(__dirname, '../public/views/thankyouPage.hbs'));
 }
 

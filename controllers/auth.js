@@ -39,6 +39,13 @@ exports.register = async (req, res) => {
 
   const { name, email, password, passwordConfirm } = req.body;
 
+  if (!email || !password || !name || !passwordConfirm) {
+    return (
+      res.render('register', {message: 'Deverá preencher todos os campos'}),
+      console.log("por favor preencha e-mail e password")
+    );
+  }
+
   connection.query(
     "SELECT email FROM users WHERE email = ?",
     [email],
@@ -257,6 +264,13 @@ exports.consult_admin = (req, res) => {
 exports.register_admin = async (req, res) => {
   console.log(req.body);
   const { name, email, password, passwordConfirm } = req.body;
+  
+  if (!email || !password) {
+    return (
+      res.status(400).redirect("/login_admin"),
+      console.log("por favor preencha e-mail e password")
+    );
+  }
 
   connection.query(
     "SELECT email FROM admins WHERE email = ?",
