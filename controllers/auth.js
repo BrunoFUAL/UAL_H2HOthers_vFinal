@@ -14,19 +14,32 @@ const ws3 = fs.createWriteStream('./public/uploads/patrocinadores.csv');
 
 dotenv.config({ path: "./.env" });
 
-const db = mysql.createConnection({
-  host: process.env.DATABASE_HOST,
-  user: process.env.DATABASE_USER,
-  password: process.env.DATABASE_PASSWORD,
-  database: process.env.DATABASE,
-});
+let connection;
+
+if (process.env.JAWSDB_URL){
+    connection = mysql.createConnection(process.env.JAWSDB_URL);
+} else {
+    connection = mysql.createConnection({
+    host: process.env.DATABASE_HOST,
+    user: process.env.DATABASE_USER,
+    password: process.env.DATABASE_PASSWORD,
+    database: process.env.DATABASE
+})
+}
+
+// const db = mysql.createConnection({
+//   host: process.env.DATABASE_HOST,
+//   user: process.env.DATABASE_USER,
+//   password: process.env.DATABASE_PASSWORD,
+//   database: process.env.DATABASE,
+// });
 
 exports.register = async (req, res) => {
   console.log(req.body);
 
   const { name, email, password, passwordConfirm } = req.body;
 
-  db.query(
+  connection.query(
     "SELECT email FROM users WHERE email = ?",
     [email],
     async (error, results) => {
@@ -46,7 +59,7 @@ exports.register = async (req, res) => {
       }
       let hashedPassword = await bcrypt.hash(password, 8);
       console.log(hashedPassword);
-      db.query(
+      connection.query(
         "INSERT INTO users SET ?",
         { name: name, email: email, password: hashedPassword },
         (error, results) => {
@@ -76,7 +89,7 @@ exports.login = async (req, res) => {
       );
     }
 
-    db.query(
+    connection.query(
       "SELECT * from users WHERE email = ?",
       [email],
       async (error, results) => {
@@ -125,7 +138,7 @@ exports.isLoggedIN = async (req, res, next) => {
       console.log(decoded);
 
       //2) Check if the user still exists
-      db.query(
+      connection.query(
         "SELECT * FROM users WHERE id = ?",
         [decoded.id],
         (error, result) => {
@@ -166,7 +179,7 @@ exports.login_admin = async (req, res) => {
       );
     }
 
-    db.query(
+    connection.query(
       "SELECT * from admins WHERE email = ?",
       [email],
       async (error, results) => {
@@ -213,7 +226,7 @@ exports.isLoggedIN_admin = async (req, res, next) => {
       console.log(decoded);
 
       //2) Check if the user still exists
-      db.query(
+      connection.query(
         "SELECT * FROM admins WHERE id = ?",
         [decoded.id],
         (error, result) => {
@@ -235,7 +248,7 @@ exports.isLoggedIN_admin = async (req, res, next) => {
 };
 
 exports.consult_admin = (req, res) => {
-  db.query("SELECT * from admins", async (error, results) => {
+  connection.query("SELECT * from admins", async (error, results) => {
     console.log(results);
     res.json(results);
   });
@@ -245,7 +258,7 @@ exports.register_admin = async (req, res) => {
   console.log(req.body);
   const { name, email, password, passwordConfirm } = req.body;
 
-  db.query(
+  connection.query(
     "SELECT email FROM admins WHERE email = ?",
     [email],
     async (error, results) => {
@@ -265,7 +278,7 @@ exports.register_admin = async (req, res) => {
       }
       let hashedPassword = await bcrypt.hash(password, 8);
       console.log(hashedPassword);
-      db.query(
+      connection.query(
         "INSERT INTO admins SET ?",
         { name: name, email: email, password: hashedPassword },
         (error, results) => {
@@ -287,7 +300,7 @@ exports.register_admin = async (req, res) => {
 
 exports.delete_vol = (req, res) => {
   const email = req.body.email;
-  db.query("DELETE from users WHERE email = email", async (error, results) => {
+  connection.query("DELETE from users WHERE email = email", async (error, results) => {
     res.render('admin', {message: 'Voluntário Eliminado com sucesso'}),
     console.log(results);
   });
@@ -297,7 +310,7 @@ exports.delete_vol = (req, res) => {
 exports.register_ass = async (req, res) => {
   console.log(req.body);
   const { name, email, tlf, date, info } = req.body;
-  db.query(
+  connection.query(
     "SELECT email FROM associacoes WHERE email = ?",
     [email],
     async (error, results) => {
@@ -310,7 +323,7 @@ exports.register_ass = async (req, res) => {
           console.log("E-mail existente")
         );
       } 
-      db.query(
+      connection.query(
         "INSERT INTO associacoes SET ?",
         { name: name, email: email, tlf: tlf, date: date, info: info },
         (error, results) => {
@@ -333,7 +346,7 @@ exports.register_ass = async (req, res) => {
 
 exports.delete_ass = (req, res) => {
   const email = req.body.email;
-  db.query("DELETE from associacoes WHERE email = email", async (error, results) => {
+  connection.query("DELETE from associacoes WHERE email = email", async (error, results) => {
     res.render('admin', {message: 'Associação eliminada com sucesso'}),
     console.log(results);
   });
@@ -343,7 +356,7 @@ exports.delete_ass = (req, res) => {
 exports.register_ptr = async (req, res) => {
   console.log(req.body);
   const { name, email, tlf, date, info } = req.body;
-  db.query(
+  connection.query(
     "SELECT email FROM patrocinadores WHERE email = ?",
     [email],
     async (error, results) => {
@@ -356,7 +369,7 @@ exports.register_ptr = async (req, res) => {
           console.log("E-mail existente")
         );
       } 
-      db.query(
+      connection.query(
         "INSERT INTO patrocinadores SET ?",
         { name: name, email: email, tlf: tlf, date: date, info: info },
         (error, results) => {
@@ -378,7 +391,7 @@ exports.register_ptr = async (req, res) => {
 
 exports.delete_ptr = (req, res) => {
   const email = req.body.email;
-  db.query("DELETE from patrocinadores WHERE email = email", async (error, results) => {
+  connection.query("DELETE from patrocinadores WHERE email = email", async (error, results) => {
     res.render('admin', {message: 'Patrocinador eliminado com sucesso'}),
     console.log(results);
   });
@@ -389,7 +402,7 @@ exports.delete_ptr = (req, res) => {
 exports.register_events = async (req, res) => {
   console.log(req.body);
   const { name, email, tlf, date, event } = req.body;
-      db.query(
+      connection.query(
         "INSERT INTO eventos SET ?",
         { name: name, email: email, tlf: tlf, date: date, event: event },
         (error, results) => {
@@ -407,7 +420,7 @@ exports.register_events = async (req, res) => {
 };
 
 exports.consult_insceventos = async (req, res) => {
-  db.query("SELECT * FROM eventos", function (err, data){
+  connection.query("SELECT * FROM eventos", function (err, data){
       if(err) throw err;
 
       const jsonData = JSON.parse(JSON.stringify(data));
@@ -422,7 +435,7 @@ exports.consult_insceventos = async (req, res) => {
 }
 
 exports.consult_voluntarios = async (req, res) => {
-  db.query("SELECT * FROM users", function (err, data){
+  connection.query("SELECT * FROM users", function (err, data){
       if(err) throw err;
 
       const jsonData = JSON.parse(JSON.stringify(data));
@@ -437,7 +450,7 @@ exports.consult_voluntarios = async (req, res) => {
 }
 
 exports.consult_associacoes = async (req, res) => {
-  db.query("SELECT * FROM associacoes", function (err, data){
+  connection.query("SELECT * FROM associacoes", function (err, data){
       if(err) throw err;
 
       const jsonData = JSON.parse(JSON.stringify(data));
@@ -452,7 +465,7 @@ exports.consult_associacoes = async (req, res) => {
 }
 
 exports.consult_patrocinadores = async (req, res) => {
-  db.query("SELECT * FROM patrocinadores", function (err, data){
+  connection.query("SELECT * FROM patrocinadores", function (err, data){
       if(err) throw err;
 
       const jsonData = JSON.parse(JSON.stringify(data));

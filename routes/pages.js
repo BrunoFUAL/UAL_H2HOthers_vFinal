@@ -71,7 +71,7 @@ router.get('/home', (req, res) => {
     res.statusCode == 200;
     res.setHeader('Content-Type', 'application/json');
 
-    db.query('SELECT * from comments', function(error, results, fields){
+    connection.query('SELECT * from comments', function(error, results, fields){
         // if(error) throw error;
     
         var comments = JSON.stringify(results);
@@ -91,7 +91,7 @@ router.post('/insert', (req, res) => {
         console.log("The user name is" + content.name);
         console.log("The comment is" + content.message);
 
-        db.query('INSERT INTO comments (comments.userName, comments.comment) VALUES (?,?)',[content.name, content.message], function(error, results, fields){
+        connection.query('INSERT INTO comments (comments.userName, comments.comment) VALUES (?,?)',[content.name, content.message], function(error, results, fields){
             if(error) throw error;
             console.log("Inserção de Comentário com sucesso");
         
