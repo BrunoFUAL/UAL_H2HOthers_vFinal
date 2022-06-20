@@ -74,7 +74,7 @@ exports.finishOrder = async (req, res) => {
           quantity: product.quantity
       }
       ))
-       //save transaction into the database
+
 
        //send an e-mail 
        await new Email({
