@@ -1,5 +1,7 @@
+const { login } = require("../../controllers/auth");
+
 let carts = document.querySelectorAll(".add-cart");
-let stage = 'prd';
+let stage = 'dev';
 let products = [];
 
 async function getProducts() {
@@ -315,7 +317,13 @@ function inserirComentario() {
   var name = document.getElementById("name").value;
   var message = document.getElementById("message").value;
 
+
+
   xhttp.open("POST", "/insert", true);
   xhttp.setRequestHeader("Content-Type", "application/json");
   xhttp.send('{"name":"' + name + '", "message":"' + message + '"}');
 }
+
+
+
+

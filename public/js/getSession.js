@@ -1,4 +1,4 @@
-let stage = 'prd';
+let stage = 'dev';
 const host = stage === 'dev' ? 'http://localhost:5000' : 'https://h2hothers.herokuapp.com';
 
 const localStorageSession = localStorage.getItem('sessionId');

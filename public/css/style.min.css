@@ -309,11 +309,13 @@ header .overlay .content img {
 /* ==========================MEDIA QUERIES (SMALL DEVICES) ========================== */
 @media screen and (max-width: 600px) {
   header {
-    height: 100vh;
     padding-top: 3rem;
+    overflow: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   header .container {
-    grid-template-columns: 1fr 1fr;
     text-align: center;
   }
   header .container .header__content {
@@ -636,12 +638,12 @@ header .overlay .content img {
 
 /* ==========================MEDIA QUERIES (MEDIUM DEVICES) ========================== */
 @media screen and (max-width: 1024px) {
-  .voluntariado {
+  #voluntariado {
     margin-top: 2rem;
   }
 
   .voluntariado-container {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 4rem;
   }
 
@@ -658,10 +660,13 @@ header .overlay .content img {
     gap: 4rem;
     justify-content: center;
     flex-wrap: wrap;
+    overflow: auto;
+    display: flex;
+    align-items: center;
   }
 
   .voluntariado__cards {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 0.7rem;
   }
 }

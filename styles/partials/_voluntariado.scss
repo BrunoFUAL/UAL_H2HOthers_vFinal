@@ -73,12 +73,12 @@
 /* ==========================MEDIA QUERIES (MEDIUM DEVICES) ========================== */
 
 @media screen and (max-width: 1024px) {
-    .voluntariado{
+    #voluntariado{
         margin-top: 2rem;
     }
 
     .voluntariado-container{
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
         gap: 4rem
     }
 
@@ -93,19 +93,21 @@
 /* ==========================MEDIA QUERIES (SMALL DEVICES) ========================== */
 
 @media screen and (max-width: 600px) {
+      
     .container .voluntariado-container{
         grid-template-columns: 1fr;
         gap: 4rem;
         justify-content: center;
         flex-wrap: wrap;
+        overflow: auto; 
+        display: flex;
+        align-items: center;
     }
 
 
     .voluntariado__cards{
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         gap: 0.7rem;
     }
-
-
 
 }
