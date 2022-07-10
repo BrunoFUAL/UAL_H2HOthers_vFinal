@@ -1,5 +1,5 @@
-stage = 'dev';
-const host = stage === 'dev' ? 'http://localhost:5000' : 'https://h2hothers.herokuapp.com';
+stage = 'prd';
+const host = stage === 'dev' ? 'http://localhost:3306' : 'https://h2hothers.herokuapp.com';
 
 const stripe = Stripe('pk_test_51L3S5MFMTF27snMwNTIp2dVEdQP9R6DjCCThcCrv3Mi1fM4Q7GezHalkDAa3LaG179mdG6xpKAwfz2JXQwGL63np00vL2vppFn');
 
